@@ -1,0 +1,29 @@
+import React from 'react';
+import {View, Text, Image, ScrollView, TextInput} from 'react-native';
+
+const App = () => {
+  return (
+    <ScrollView contentContainerStyle>
+      <Text>Justine B. Esguerra</Text>
+      <View>
+        <Text>BSIT 301</Text>
+        <Image
+          source={{
+            uri: 'https://i.pinimg.com/736x/60/f5/62/60f562cdc9749619904a41ff4e7e20f9.jpg',
+          }}
+          style={{width: 200, height: 200,}}
+        />
+      </View>
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: 'gray',
+          borderWidth: 1,
+        }}
+        defaultValue="Type yes if you like Minji"
+      />
+    </ScrollView>
+  );
+};
+
+export default App;

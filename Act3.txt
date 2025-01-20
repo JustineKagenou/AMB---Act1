@@ -1,0 +1,46 @@
+import React, {useState} from 'react';
+import {Text, StyleSheet} from 'react-native';
+import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+
+const TextInANest = () => {
+  const [titleText, setTitleText] = useState("Justine Esguerra");
+  const bodyText = 'In our Sysarch 1 and 2,I am the leader in our group and our team is called Weeboo. In the Documentation we provide our own role Me as a leader Im the one who give the role to them.Yamson is the one who interview and contact the shop.Paner is the one who is doing our flowchart and Jason is the one who is expert in the product. And I as a leader I make sure that everything is in placed. I also made a prototype and fix our grammar and also I check every inch of our documentation so that we wont messed up. And that is for our Sysarch 1 and for the Sysarch 2 Lomocho joined in our group. Lomocho is expert in the coding and I also help him in that field because I also know a little. And also Im good at the logic so Lomocho and I brain storm in our System. Paner,Yamson,Jason is doing the User Manual and after they did it we print and pass it to our prof in Sysarc 2.';
+
+  const onPressTitle = () => {
+    setTitleText("Bold after Press");
+  };
+
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <Text style={styles.baseText}>
+          <Text style={styles.titleText} onPress={onPressTitle}>
+            {titleText}
+            {'\n'}
+            {'\n'}
+          </Text>  
+          <Text numberOfLines={5}>{bodyText}</Text>
+        </Text>
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  baseText: {
+    fontFamily: 'bold',
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color:'red',
+  },
+  setTitleText:{
+    fontWeight: 'bold',
+  },
+});
+
+export default TextInANest;
